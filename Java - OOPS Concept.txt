@@ -361,3 +361,114 @@ System.out.println(2557);
 
 
 6. Abstraction and types:
+	abstract keyword should be used in both class and methods
+	Abstract method should be empty. due to this we cannot create object
+	Object can be created in 
+
+	Class - > keyword should be declared before "Class" text 
+	Methood -> Keyword should be declared before void text
+
+Types:
+1. Partial Abstraction
+2. Fully Abstraction - Interface
+
+Partial Abstraction:
+We can assign methods with abstraction and without abstraction
+	Class - > keyword should be declared before "Class" text 
+	Methood -> Keyword should be declared before void text
+Extend keyword should be used
+Abstract method should be used in different class
+Do not have any default return type
+
+Ex: 
+
+package Abstraction;
+
+public abstract class PartialParent {
+
+	public abstract void methodA();
+
+	public void methodB() {
+		System.out.println("Non-Abstract");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
+
+
+package Abstraction;
+
+public class PartialChildAbstractA extends PartialParent {
+
+	@Override
+	public void methodA() {
+		// TODO Auto-generated method stub
+		System.out.println("Abstract");
+	}
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		PartialChildAbstractA obj = new PartialChildAbstractA();
+		obj.methodB();
+		obj.methodA();
+	}
+
+}
+
+
+Fully Abstraction:
+	interface keyword should be used instead of Abstract keyword
+	implements keyword should be used instead of extends keyword
+	We can assign methods without abstract keyword in methods
+	Default return type is public. no need to assign the return type
+	We can not create object in Interface 
+
+package Abstraction;
+
+public interface FullyAbstractionParent {
+
+	void methodA();
+
+	void methodB();
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+
+package Abstraction;
+
+public class FullyAbstractionChild implements FullyAbstractionParent {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		FullyAbstractionChild obj = new FullyAbstractionChild();
+		obj.methodA();
+		obj.methodB();
+	}
+
+	@Override
+	public void methodA() {
+		// TODO Auto-generated method stub
+		System.out.println("methodA");
+	}
+
+	@Override
+	public void methodB() {
+		// TODO Auto-generated method stub
+		System.out.println("methodB");
+	}
+
+}
+
+
+
+	
