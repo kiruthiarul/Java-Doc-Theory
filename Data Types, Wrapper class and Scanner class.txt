@@ -1,0 +1,91 @@
+Data Types:
+
+-2 n-1 to 2 n-1 -1
+Classes of data type is called Wrapper class
+
+
+
+Types/Wrapper class		Keyword			Declaration				Sample						Size
+Int 				int			Numbers(Integers)			int I = 106					4 Byte
+Byte				byte			Numbers					byte b = 13					1 Byte
+Float				float			decimal					float f = 254.54f				4 Byte
+Short				short			Numbers					short s = 54					2 Byte
+Boolean				Boolean			true/false				Boolean bo = true				------
+Long				long			Numbers					long lo = 4365364756757l			8 Byte
+Double				double			Decimal					double d = 65546457675.54746756d		8 Byte
+String				String			numbers+Char+specal char		String st = "String with quotes"		------
+Char				char			single letter or number 		char c = 'f'					------
+
+
+
+
+Scanner class:
+
+Used to assign values in run time(ie - input can be given in console output area)
+Predefined package available "java.utils"
+
+nextInt()
+nextByte()
+nextFloat()
+nextBoolean()
+nextLong()
+nextDouble()
+next() - String  - ignore spaces and rest of the strings
+nextLine() - String - include all the spaces and all strings
+
+
+Syntax:
+
+Scanner <Variable_Name> = new Scanner(System.in);
+vatiable_name.nextInt();
+
+EX:
+package Scanner;
+
+import java.util.Scanner;
+
+public class ScannerClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scr = new Scanner(System.in);
+		System.out.println("Enter a Value");
+		int a = scr.nextInt();
+	System.out.println("the value is" + a);
+//
+//		System.out.println("enter float value");
+//		float f = scr.nextFloat();
+//		System.out.println("float" + f);
+//
+//		System.out.println("enter byte value");
+//		byte by = scr.nextByte();
+//		System.out.println("byte" + by);
+//
+//		System.out.println("enter long value");
+//		long l = scr.nextLong();
+//		System.out.println("long" + l);
+//
+//		System.out.println("enter double value");
+//		double d = scr.nextDouble();
+//		System.out.println("double" + d);
+//
+//		System.out.println("enter short value");
+//		short sh = scr.nextShort();
+//		System.out.println("short" + sh);
+//
+//		System.out.println("enter boolean value");
+//		boolean bl = scr.nextBoolean();
+//		System.out.println("Boolean" + bl);
+
+//		System.out.println("enter string value");
+//		String st = scr.next();
+//		System.out.println("string" + st);
+
+		System.out.println("enter stringlong value");
+		String stl = scr.nextLine();
+		System.out.println("string" + stl);
+
+//Doubt in string line
+	}
+
+}

@@ -1,0 +1,363 @@
+OOPS Concept:
+
+1. Class:
+Has collection of Methods and object
+Fundamental concept in OOPS
+Pascal Notation should be used
+
+2. Object:
+Fundamental concept in OOPS
+Can be created in class 
+With the use of object we can call any method from the class
+Should be created within main method
+Used to allocate memory at compile time
+
+Syntax:
+<Classname> <objectname> = new <Classname()>;
+
+
+3. Method:
+Fundamental concept in OOPS
+Used to perform specific task by implementing logics
+Can be used when specific program/task need to be performed.
+Camal notation used for Method name
+
+Syntax:
+<Return type> void <Method Name>();
+{
+//Based on the requirement logics can be implemented 
+} 
+
+
+Sample program for Class, Object and Method:
+
+public class College {
+
+	public void collegeName() {
+		// TODO Auto-generated method stub
+		System.out.println("collegeName");
+	}
+public static void main(String[] args) {
+College Collegeobj = new College();
+Collegeobj.collegeName();
+}
+}
+
+
+4. Inheritance and types
+Used to access one class properties from another class.
+"extends" keyword should be used
+If a class contains extends keyword with another class then that class is called as child class.
+We can re-use the class wherever it is required.So this is useful to reduce the memory size
+
+Types:
+**Single inheritance
+	1 Parent and 1 class called as single inheritance
+**Multiple inheritance
+	1Child and multiple parent called as multiple inheritance 
+	Not Applicable in java. 
+	Can be implemented using interface method
+	
+**Multi level inheritance
+	single class can act as parent as well as child
+EX:
+	ClassB extends ClassA
+	ClassC extends ClassB
+	ClassD extends ClassC
+**Hierarchal inheritance
+	Single parent with multiple child
+
+EX:
+	ClassB extends ClassA
+	ClassC extends ClassA
+	ClassD extends ClassA
+
+Sample program for Inheritance:
+Single Inheritance:
+
+package Inheritance;
+
+public class SingleParentA {
+	public void methodA() {
+		// TODO Auto-generated method stub
+System.out.println("MethodA");
+	}
+	public void methodB() {
+		// TODO Auto-generated method stub
+System.out.println("MethodD");
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+Single Child:
+package Inheritance;
+
+public class SingleChildB extends SingleParentA{
+	public void methodC() {
+		// TODO Auto-generated method stub
+System.out.println("MethodC");
+	}
+	public void methodD() {
+		// TODO Auto-generated method stub
+System.out.println("MethodD");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SingleChildB SingleChildBobj = new SingleChildB();
+		SingleChildBobj.methodA();
+		SingleChildBobj.methodB();
+		SingleChildBobj.methodC();
+		SingleChildBobj.methodD();
+	}
+
+}
+
+Multi level Parent:
+
+package Inheritance;
+
+public class MultilevelParentA {
+
+	public void multilevelA() {
+		// TODO Auto-generated method stub
+System.out.println("multilevelA");
+	}
+	public void multilevelB() {
+		// TODO Auto-generated method stub
+System.out.println("multilevelB");
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+Multi level child:
+
+package Inheritance;
+
+public class MultilevelChildC extends MultilevelChildB{
+	public void multilevelE() {
+		// TODO Auto-generated method stub
+System.out.println("multilevelE");
+	}
+	public void multilevelF() {
+		// TODO Auto-generated method stub
+System.out.println("multilevelF");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MultilevelChildC MultilevelChildCobj = new MultilevelChildC();
+		MultilevelChildCobj.multilevelE();
+		MultilevelChildCobj.multilevelF();
+		MultilevelChildCobj.multilevelA();
+		MultilevelChildCobj.multilevelB();
+		MultilevelChildCobj.multilevelC();
+		MultilevelChildCobj.multilevelD();
+	}
+
+}
+
+Multi level child B
+
+package Inheritance;
+
+public class MultilevelChildB extends MultilevelParentA{
+
+	public void multilevelC() {
+		// TODO Auto-generated method stub
+System.out.println("multilevelC");
+	}
+	public void multilevelD() {
+		// TODO Auto-generated method stub
+System.out.println("multilevelD");
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MultilevelChildB multichildbobj = new MultilevelChildB();
+		multichildbobj.multilevelC();
+		multichildbobj.multilevelD();
+	
+	}
+
+}
+
+
+HierarichalParentA
+
+package Inheritance;
+
+public class HierarichalParentA {
+	
+	public void HierarichalA() {
+		// TODO Auto-generated method stub
+System.out.println("HierarichalA");
+	}
+	public void HierarichalB() {
+		// TODO Auto-generated method stub
+System.out.println("HierarichalB");
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+HierarichalChildB
+
+package Inheritance;
+
+public class HierarichalChildB extends HierarichalParentA{
+	public void HierarichalC() {
+		// TODO Auto-generated method stub
+System.out.println("HierarichalC");
+	}
+	public void HierarichalD() {
+		// TODO Auto-generated method stub
+		System.out.println("HierarichalD");
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HierarichalChildB HierarichalChildBobj = new HierarichalChildB();
+		HierarichalChildBobj.HierarichalA();
+		HierarichalChildBobj.HierarichalB();
+		HierarichalChildBobj.HierarichalC();
+		HierarichalChildBobj.HierarichalD();
+	}
+
+}
+HeirarichalChildC
+
+package Inheritance;
+
+public class HeirarichalChildC extends HierarichalParentA {
+	public void HeirarichalE() {
+		// TODO Auto-generated method stub
+System.out.println("HeirarichalE");
+	}
+	public void HeirarichalF() {
+		// TODO Auto-generated method stub
+System.out.println("HeirarichalF");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HeirarichalChildC HeirarichalChildCobj = new HeirarichalChildC();
+		HeirarichalChildCobj.HeirarichalE();
+		HeirarichalChildCobj.HeirarichalF();
+		HeirarichalChildCobj.HierarichalA();
+		HeirarichalChildCobj.HierarichalB();
+	}
+
+}
+
+
+
+5. Polymorphism and types
+	Methods can be utilized more than once with same method name and different argument.
+Types:
+	Compile time polymorphism - Method overloading
+	Run time polymorphism - Method Overriding/Method Binding
+
+Compile time:
+Single class can be used
+Within thee class we have to use same method with different argument
+
+Run Time:
+Can be used for different classes
+extends keyword should be used
+Same method we have to use
+It omits parent class methods and accepts child class methods
+
+Ex: 
+Method Over loading:
+
+package Ploymorphism;
+
+public class MethodOverloading {
+	public void methodA(double i, String s, boolean c) {
+		// TODO Auto-generated method stub
+System.out.println(i);
+System.out.println(s);
+System.out.println(c);
+	}
+	public void methodA(int e) {
+		// TODO Auto-generated method stub
+		System.out.println(e);
+		//System.out.println(f);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MethodOverloading obj = new MethodOverloading();
+		obj.methodA(1, "ggg123", true);
+		obj.methodA(1);
+	}
+
+}
+
+
+Method Overriding:
+
+package Ploymorphism;
+
+public class MethodOverridingParentA {
+	
+	public void vegitables() {
+		// TODO Auto-generated method stub
+System.out.println(25);
+	}
+	public void fruits() {
+		// TODO Auto-generated method stub
+		System.out.println(235);
+	}
+	public void snacks() {
+		// TODO Auto-generated method stub
+		System.out.println(436);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MethodOverridingParentA overrideparentobj = new MethodOverridingParentA();
+		overrideparentobj.fruits();
+	}
+
+}
+
+
+Child:
+package Ploymorphism;
+
+public class MethodOverridingChildB extends MethodOverridingParentA {
+	public void vegitables() {
+		// TODO Auto-generated method stub
+System.out.println(2557);
+	}
+	public void fruits() {
+		// TODO Auto-generated method stub
+		System.out.println(23435);
+	}
+	public void snacks() {
+		// TODO Auto-generated method stub
+		System.out.println(43576);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MethodOverridingChildB overridingchildobj = new MethodOverridingChildB();
+		overridingchildobj.fruits();
+		overridingchildobj.vegitables();
+		overridingchildobj.snacks();
+	}
+
+}
+
+
+6. Abstraction and types:
