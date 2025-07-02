@@ -1,0 +1,39 @@
+Operators
+
+Arithmetic operation:
+Addition	+
+Subtraction	-
+Multiplication	*
+Division	/
+Modulus		%
+
+Unary operators:
+unary plus		+
+Unary Minus		-
+increamental 		++
+Decremental		--
+Logical complement	!
+
+Relational operators
+Equal to			==
+not equal to			!=
+greaterthan			>
+lessthan			<
+greater than or equalto		>=
+less than or equalto		<=
+
+
+Logical operators:
+Logical AND   		&&
+Logical OR		||
+Logical NOT		!
+
+
+Assignment Operators:
+Simple assignment		=
+Compound assignment		+=, -+, *=, /=, %=
+
+
+
+
+
