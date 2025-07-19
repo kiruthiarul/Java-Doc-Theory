@@ -1,0 +1,49 @@
+Singleton:
+
+If multiple object created for a class then it will require more memory. To save and reduce the memory size then we need to use singleton
+
+
+
+
+
+
+
+Constructor:
+Class name and method name should be same
+No default return type
+We cannot use return keyword in constructor
+No need to call the methods using object.
+
+Constructor can be created as private and it cannot be called in another class.
+
+Default and parametarized constructor
+
+
+Default constructor
+
+EX: 
+
+public class TestConstructor
+{
+
+TestConstructor()
+{
+sysout("test);
+}
+
+
+Parametarized:
+
+public class TestConstructor
+{
+
+TestConstructor(int a, Boolean b)
+{
+sysout("test);
+}
+
+main(string[] args){
+
+TestConstructor obj1 = new TestConstructor(10, "true");
+}
+}

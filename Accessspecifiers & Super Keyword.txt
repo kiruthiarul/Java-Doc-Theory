@@ -1,0 +1,28 @@
+Accessspecifiers & Super Keyword:
+
+Accessspecifiers:
+
+Public: if it is mentioned in class level
+Inside and outside the class
+Inside and outside the package
+
+Private: 
+Accessible Within the class
+we cannot declare it in class level
+
+Default:
+Accessible within the package
+
+Protected:
+we cannot declare it in class level
+can declare method level
+Withing package level we can access
+
+Public-class, method - everywhere
+Private(no class)/method - within the class, cannotbe used in another class(Both same and different package)
+Protected(No class)/Method - within class with a package/ outside package -> extends inherit then create child
+Default - class method -> scope in within a package with all call classes
+
+
+Super Keyword:
+

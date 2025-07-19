@@ -1,0 +1,157 @@
+Final Keyword
+1. Can be assigned in class, method, variable level
+2. If final keyword declared class level then inheritance is not possible
+3. If final keyword declared in variable level then we cannot assign multiple values for same variable
+4. If final keyword declared in method level then we cannot override the values
+
+EX:
+
+public class Final{
+
+public static void main(string[] args){
+
+final int i = 10;
+
+i = 20;
+}
+}
+
+O/P:
+10
+
+
+public final class ParentFinalClass{
+public static void main(string[] args){
+int i = 10;
+}
+
+public class ChildFinalclass extends ParentFinalClass{
+public static void main(string[] args){
+int j = 10;
+}
+
+
+
+
+Variable:
+
+Types:
+Local variable
+Static variable
+GLobal variable
+
+EX: Local variable:
+
+public class Variables{
+
+public void methodA{
+
+int a = 10;
+
+}
+
+public void methodB{
+
+a=20;
+
+}
+}
+
+EX: Global/instance/Class level variable:
+
+public class Variables{
+
+int a = 10;
+
+public void methodA{
+
+
+}
+
+public void methodB{
+
+a=20;
+
+}
+}
+
+EX: Object level variable
+
+To consider class level instances/Variables instead of method level variable then we have to use this.variable name inside the print statement
+
+EX:
+
+public class Variables{
+
+int a = 10;
+
+public void methodA{
+int a = 11;
+this.a = 50;
+System.out.println(this.a)
+
+}
+
+public void methodB{
+
+a=20;
+
+}
+}
+
+
+Static:
+
+
+1. Static variable
+* Memory will retain till end of the  program if we declare it in class level
+static variable can be accessed both static and non static methods
+EX:
+public class StaticVariables {
+	int a = 10;
+	public void methodA() {
+		// TODO Auto-generated method stub
+a++;
+System.out.println(a);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StaticVariables obj = new StaticVariables();
+		obj.methodA();
+		obj.methodA();
+		obj.methodA();
+
+	}
+
+}
+
+2. Static method
+
+If we declare static in method level then no need to mention the class name in main method
+No need to inherit the method if it is public and static.
+We cannot declare static keyword in class level - if needed then we need to create inner class.
+
+EX:
+
+public class StaticVariables {
+	int a = 10;
+	public void methodA() {
+a++;
+System.out.println(a);
+	}
+	public static void methodB() {
+		// TODO Auto-generated method stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StaticVariables.methodA();
+		methodB();
+		
+
+	}
+
+}
+
+
